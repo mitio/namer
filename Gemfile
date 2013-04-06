@@ -4,6 +4,7 @@ gem 'rails', '3.2.13'
 gem 'jquery-rails'
 gem 'unicorn'
 gem 'sass-twitter-bootstrap'
+gem 'simple_form'
 
 group :production do
   gem 'pg'
