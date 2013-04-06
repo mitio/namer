@@ -1,3 +1,11 @@
 //= require twitter/bootstrap
 //= require_self
 //= require_tree .
+
+.intro {
+	margin: 100px;
+	text-align: center;
+	.btn {
+		margin-top: 50px;
+	}
+}
