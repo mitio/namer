@@ -6,4 +6,8 @@ class Suggestion < ActiveRecord::Base
   attr_accessible :name
 
   scope :in_alphabetical_order, order(arel_table[:name].asc)
+
+  def destroyable?
+    true
+  end
 end

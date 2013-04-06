@@ -12,11 +12,26 @@
 <h4>Current name suggestions</h4>
 
 <% if @naming_project.suggestions.any? %>
-  <ul>
-    <% @naming_project.suggestions.in_alphabetical_order.each do |suggestion| %>
-      <li><%= suggestion.name %></li>
-    <% end %>
-  </ul>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @naming_project.suggestions.in_alphabetical_order.each do |suggestion| %>
+        <tr>
+          <td><%= suggestion.name %></td>
+          <td>
+            <%= simple_form_for [@naming_project, suggestion], method: :delete, html: {class: 'form-inline'} do |f| %>
+              <%= f.button :submit, 'Delete', class: 'btn btn-mini btn-danger' %>
+            <% end %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
 <% else %>
   <p>
     No name suggestions yet.
