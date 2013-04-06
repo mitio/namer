@@ -5,6 +5,7 @@ gem 'jquery-rails'
 gem 'unicorn'
 gem 'sass-twitter-bootstrap'
 gem 'simple_form'
+gem 'dalli'
 
 group :production do
   gem 'pg'
