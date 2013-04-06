@@ -9,6 +9,7 @@ class NamingProject < ActiveRecord::Base
 
   attr_accessible :description
 
+  before_validation :set_key
   before_create :set_key
 
   class << self
@@ -24,6 +25,6 @@ class NamingProject < ActiveRecord::Base
   private
 
   def set_key
-    self.key = Digest::SHA1.hexdigest "#{SecureRandom.base64} - #{Rails.configuration.secret_token}"
+    self.key ||= Digest::SHA1.hexdigest "#{SecureRandom.base64} - #{Rails.configuration.secret_token}"
   end
 end
