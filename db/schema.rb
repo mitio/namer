@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130406133752) do
+ActiveRecord::Schema.define(:version => 20130406153410) do
 
   create_table "naming_projects", :force => true do |t|
     t.string   "key",         :null => false
@@ -22,5 +22,15 @@ ActiveRecord::Schema.define(:version => 20130406133752) do
   end
 
   add_index "naming_projects", ["key"], :name => "index_naming_projects_on_key", :unique => true
+
+  create_table "suggestions", :force => true do |t|
+    t.string   "name",              :null => false
+    t.integer  "naming_project_id", :null => false
+    t.string   "ip"
+    t.datetime "created_at",        :null => false
+    t.datetime "updated_at",        :null => false
+  end
+
+  add_index "suggestions", ["naming_project_id", "name"], :name => "index_suggestions_on_naming_project_id_and_name", :unique => true
 
 end

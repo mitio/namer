@@ -22,6 +22,10 @@ class NamingProject < ActiveRecord::Base
     key
   end
 
+  def display_name
+    "project #{key[0..10]}..."
+  end
+
   private
 
   def set_key

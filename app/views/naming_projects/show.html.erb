@@ -1,8 +1,29 @@
 <h2>
-	Naming Project <%= truncate @naming_project.key, length: 10 %>
-	<small><%= link_to '(edit)', edit_naming_project_path(@naming_project) %></small>
+  Naming Project <%= truncate @naming_project.key, length: 10 %>
+  <small><%= link_to '(edit)', edit_naming_project_path(@naming_project) %></small>
 </h2>
 
 <% if @naming_project.description.present? %>
-	<%= simple_format @naming_project.description %>
+  <blockquote>
+    <%= simple_format @naming_project.description %>
+  </blockquote>
 <% end %>
+
+<h4>Current name suggestions</h4>
+
+<% if @naming_project.suggestions.any? %>
+  <ul>
+    <% @naming_project.suggestions.in_alphabetical_order.each do |suggestion| %>
+      <li><%= suggestion.name %></li>
+    <% end %>
+  </ul>
+<% else %>
+  <p>
+    No name suggestions yet.
+    <%= link_to 'Add your own!', new_naming_project_suggestion_path(@naming_project) %>
+  </p>
+<% end %>
+
+<p>
+  <%= link_to 'Suggest a new name', new_naming_project_suggestion_path(@naming_project), class: 'btn btn-small btn-success' %>
+</p>

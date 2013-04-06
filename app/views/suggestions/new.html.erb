@@ -1,0 +1,11 @@
+<%= simple_form_for [@naming_project, @suggestion], html: {class: 'form-vertical'} do |f| %>
+  <fieldset>
+    <legend>New name suggestion for <%= link_to @naming_project.display_name, @naming_project %></legend>
+    <%= f.input :name %>
+  </fieldset>
+
+  <div class="form-actions">
+    <%= f.button :submit, 'Suggest this name', class: 'btn btn-small btn-success' %>
+    or <%= link_to 'Back to the project', naming_project_path(@naming_project) %>
+  </div>
+<% end %>
