@@ -3,6 +3,7 @@ class NamingProjectsController < ApplicationController
   before_filter :load_naming_project, only: [:show, :edit]
 
   def new
+    @naming_project = NamingProject.new
   end
 
   def create
