@@ -1,0 +1,11 @@
+<%= simple_form_for @project, html: {class: 'form-vertical'} do |f| %>
+  <fieldset>
+    <legend>Edit Project</legend>
+    <%= render 'form_fields', f: f %>
+  </fieldset>
+
+  <div class="form-actions">
+    <%= f.button :submit, 'Save changes', class: 'btn btn-success' %>
+    or <%= link_to 'Go back to the project', project_path(@project) %>
+  </div>
+<% end %>

@@ -4,6 +4,8 @@ This is a small application that allows for a group of people to brainstorm a na
 
 === Features
 
-* Multiple naming sessions
+* Multiple projects for brainstorming names
 * Anonymous name suggestions
-* Anonymous votes (a cookie is added, security is minimal)
+* Anonymous votes (with minimal security)
+
+Currently, the project implements very minimal security, as trust among the users is assumed.

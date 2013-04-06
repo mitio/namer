@@ -1,6 +1,6 @@
 class SuggestionsController < ApplicationController
   respond_to :html
-  before_filter :load_naming_project
+  before_filter :load_project
 
   def new
     @suggestion = scope.build
@@ -31,14 +31,14 @@ class SuggestionsController < ApplicationController
   private
 
   def scope
-    @naming_project.suggestions
+    @project.suggestions
   end
 
   def project_url
-    naming_project_path @naming_project
+    project_path @project
   end
 
-  def load_naming_project
-    @naming_project = NamingProject.by_key params[:naming_project_id]
+  def load_project
+    @project = Project.by_key params[:project_id]
   end
 end

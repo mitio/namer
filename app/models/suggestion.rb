@@ -1,7 +1,7 @@
 class Suggestion < ActiveRecord::Base
-  belongs_to :naming_project
+  belongs_to :project
 
-  validates :name, presence: true, uniqueness: {scope: :naming_project_id}
+  validates :name, presence: true, uniqueness: {scope: :project_id}
 
   attr_accessible :name
 

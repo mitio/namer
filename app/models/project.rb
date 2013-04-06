@@ -1,7 +1,7 @@
 require 'digest/sha1'
 require 'securerandom'
 
-class NamingProject < ActiveRecord::Base
+class Project < ActiveRecord::Base
   has_many :suggestions, dependent: :destroy
 
   validates :key, presence: true, uniqueness: true

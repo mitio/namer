@@ -1,6 +1,6 @@
 Namer::Application.routes.draw do
   root to: 'home#index'
-  resources :naming_projects do
+  resources :projects do
     resources :suggestions
   end
 
