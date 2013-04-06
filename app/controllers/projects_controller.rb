@@ -2,6 +2,10 @@ class ProjectsController < ApplicationController
   respond_to :html
   before_filter :load_user_project, only: [:edit, :update]
 
+  def index
+    @projects = scope
+  end
+
   def new
     @project = scope.build
   end

@@ -3,6 +3,7 @@ module ApplicationHelper
     {
       'Home'                    => root_path,
       'New Project'             => new_project_path,
+      'Your Projects'           => projects_path,
       'About'                   => about_pages_path,
     }
   end

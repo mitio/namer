@@ -1,0 +1,33 @@
+<h1>Your Projects</h1>
+
+<p><%= link_to 'Create a new project', new_project_path, class: 'btn btn-mini btn-success' %></p>
+
+<% if @projects.any? %>
+  <table class="table projects">
+    <thead>
+      <tr>
+        <th>Project</th>
+        <th>Suggestions</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @projects.each do |project| %>
+        <tr>
+          <td>
+            <%= link_to project.display_name.humanize, project %>
+          </td>
+          <td>
+            <%= project.suggestions.size %>
+          </td>
+          <td class="actions">
+            <%= link_to 'Edit', [:edit, project] %>
+            <%= link_to 'View results', 'TODO' %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+<% else %>
+  <p>You have not created any projects yet.</p>
+<% end %>
