@@ -17,6 +17,10 @@ class NamingProject < ActiveRecord::Base
     end
   end
 
+  def to_param
+    key
+  end
+
   private
 
   def set_key
