@@ -3,8 +3,12 @@ require 'securerandom'
 
 class NamingProject < ActiveRecord::Base
   has_many :suggestions, dependent: :destroy
-  validate :key, presence: true, uniqueness: true
+
+  validates :key, presence: true, uniqueness: true
+  validates :description, presence: true
+
   attr_accessible :description
+
   before_create :set_key
 
   class << self
