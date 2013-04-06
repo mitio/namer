@@ -16,4 +16,10 @@ module ApplicationHelper
     else              'info'
     end
   end
+
+  def vote_types
+    Vote.vote_types.map do |type|
+      [t("vote_types.#{type}"), type]
+    end
+  end
 end

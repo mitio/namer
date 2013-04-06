@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130406173559) do
+ActiveRecord::Schema.define(:version => 20130406182131) do
 
   create_table "projects", :force => true do |t|
     t.string   "key",         :null => false
@@ -45,5 +45,15 @@ ActiveRecord::Schema.define(:version => 20130406173559) do
   end
 
   add_index "users", ["authentication_token"], :name => "index_users_on_authentication_token", :unique => true
+
+  create_table "votes", :force => true do |t|
+    t.integer  "suggestion_id", :null => false
+    t.integer  "user_id",       :null => false
+    t.string   "vote",          :null => false
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
+  end
+
+  add_index "votes", ["user_id", "suggestion_id"], :name => "index_votes_on_user_id_and_suggestion_id", :unique => true
 
 end

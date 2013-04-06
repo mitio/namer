@@ -2,7 +2,9 @@ Namer::Application.routes.draw do
   root to: 'home#index'
 
   resources :projects do
-    resources :suggestions
+    resources :suggestions do
+      resources :votes
+    end
   end
 
   resources :suggestions, only: :index

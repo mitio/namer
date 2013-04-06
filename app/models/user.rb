@@ -1,6 +1,7 @@
 class User < ActiveRecord::Base
-  has_many :projects
+  has_many :projects, dependent: :destroy
   has_many :suggestions
+  has_many :votes, dependent: :destroy
 
   validates :authentication_token, presence: true, uniqueness: true
 
