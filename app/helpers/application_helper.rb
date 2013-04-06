@@ -3,7 +3,7 @@ module ApplicationHelper
     {
       'Home'                    => root_path,
       'New Project'             => new_naming_project_path,
-      'About'                   => 'TODO',
+      'About'                   => about_pages_path,
     }
   end
 end
