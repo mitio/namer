@@ -9,7 +9,10 @@ class NamingProjectsController < ApplicationController
   def create
     @naming_project = NamingProject.new params[:naming_project]
     @naming_project.ip = request.remote_addr
-    @naming_project.save
+
+    if @naming_project.save
+      flash[:notice] = 'The naming project has been created.'
+    end
 
     respond_with @naming_project
   end
@@ -21,7 +24,9 @@ class NamingProjectsController < ApplicationController
   end
 
   def update
-    @naming_project.update_attributes params[:naming_project]
+    if @naming_project.update_attributes params[:naming_project]
+      flash[:notice] = 'Your changes have been saved.'
+    end
 
     respond_with @naming_project
   end

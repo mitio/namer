@@ -9,9 +9,12 @@ class SuggestionsController < ApplicationController
   def create
     @suggestion = scope.build params[:suggestion]
     @suggestion.ip = request.remote_addr
-    @suggestion.save
 
-    respond_with @suggestion, location: project_url, notice: "Your suggestion '#{@suggestion.name}' has been added."
+    if @suggestion.save
+      flash[:notice] = "Your suggestion '#{@suggestion.name}' has been added."
+    end
+
+    respond_with @suggestion, location: project_url
   end
 
   def destroy
