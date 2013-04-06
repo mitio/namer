@@ -8,9 +8,12 @@
       </button>
       <%= link_to 'Namer', root_path, class: 'brand' %>
       <div class="nav-collapse collapse">
-        <ul class="nav">
-          <%= link_to 'New Project', new_naming_project_path %>
-          <%= link_to 'About', 'TODO' %>
+        <ul class="nav pull-right">
+          <% top_navigation_urls.each do |label, url| %>
+            <li class="<%= url == url_for() ? 'active' : '' %>">
+              <%= link_to label, url %>
+            </li>
+          <% end %>
         </ul>
       </div>
     </div>
