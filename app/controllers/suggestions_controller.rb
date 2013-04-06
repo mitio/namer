@@ -20,7 +20,7 @@ class SuggestionsController < ApplicationController
   def destroy
     @suggestion = scope.find params[:id]
 
-    if @suggestion.destroyable?
+    if @suggestion.destroyable_by? current_user
       @suggestion.destroy
       redirect_to project_url, notice: "The suggestion '#{@suggestion.name}' was deleted."
     else

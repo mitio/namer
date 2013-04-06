@@ -10,4 +10,8 @@ class Suggestion < ActiveRecord::Base
   def destroyable?
     true
   end
+
+  def destroyable_by?(user)
+    destroyable? and ip == user
+  end
 end
