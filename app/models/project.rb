@@ -1,6 +1,3 @@
-require 'digest/sha1'
-require 'securerandom'
-
 class Project < ActiveRecord::Base
   has_many :suggestions, dependent: :destroy
 
@@ -29,6 +26,6 @@ class Project < ActiveRecord::Base
   private
 
   def set_key
-    self.key ||= Digest::SHA1.hexdigest "#{SecureRandom.base64} - #{Rails.configuration.secret_token}"
+    self.key ||= KeyGenerator.generate
   end
 end
