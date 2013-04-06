@@ -1,6 +1,6 @@
 class NamingProjectsController < ApplicationController
   respond_to :html
-  before_filter :load_naming_project, only: [:show, :edit]
+  before_filter :load_naming_project, only: [:show, :edit, :update]
 
   def new
     @naming_project = NamingProject.new

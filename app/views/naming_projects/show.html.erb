@@ -1,0 +1,8 @@
+<h2>
+	Naming Project <%= truncate @naming_project.key, length: 10 %>
+	<small><%= link_to '(edit)', edit_naming_project_path(@naming_project) %></small>
+</h2>
+
+<% if @naming_project.description.present? %>
+	<%= simple_format @naming_project.description %>
+<% end %>

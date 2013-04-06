@@ -1,7 +1,7 @@
 <%= simple_form_for @naming_project, html: {class: 'form-vertical'} do |f| %>
   <fieldset>
     <legend>New Naming Project</legend>
-    <%= f.input :description, hint: 'You can use simple HTML here. Paragraphs will be automatically created for you.' %>
+    <%= render 'form_fields', f: f %>
   </fieldset>
 
   <div class="form-actions">
