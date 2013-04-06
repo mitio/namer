@@ -1,4 +1,7 @@
 class User < ActiveRecord::Base
+  has_many :projects
+  has_many :suggestions
+
   validates :authentication_token, presence: true, uniqueness: true
 
   class << self

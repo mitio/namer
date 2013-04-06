@@ -1,13 +1,13 @@
 class ProjectsController < ApplicationController
   respond_to :html
-  before_filter :load_project, only: [:show, :edit, :update]
+  before_filter :load_user_project, only: [:edit, :update]
 
   def new
-    @project = Project.new
+    @project = scope.build
   end
 
   def create
-    @project = Project.new params[:project]
+    @project = scope.build params[:project]
     @project.ip = request.remote_addr
 
     if @project.save
@@ -18,9 +18,11 @@ class ProjectsController < ApplicationController
   end
 
   def show
+    @project = Project.by_key params[:id]
   end
 
   def edit
+    @project = scope.by_key params[]
   end
 
   def update
@@ -33,7 +35,11 @@ class ProjectsController < ApplicationController
 
   private
 
-  def load_project
-    @project = Project.by_key params[:id]
+  def scope
+    current_user.projects
+  end
+
+  def load_user_project
+    @project = scope.by_key params[:id]
   end
 end

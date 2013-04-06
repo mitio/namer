@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130406171438) do
+ActiveRecord::Schema.define(:version => 20130406173559) do
 
   create_table "projects", :force => true do |t|
     t.string   "key",         :null => false
@@ -19,9 +19,11 @@ ActiveRecord::Schema.define(:version => 20130406171438) do
     t.string   "ip"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
+    t.integer  "user_id"
   end
 
   add_index "projects", ["key"], :name => "index_naming_projects_on_key", :unique => true
+  add_index "projects", ["user_id"], :name => "index_projects_on_user_id"
 
   create_table "suggestions", :force => true do |t|
     t.string   "name",       :null => false
@@ -29,9 +31,11 @@ ActiveRecord::Schema.define(:version => 20130406171438) do
     t.string   "ip"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.integer  "user_id"
   end
 
   add_index "suggestions", ["project_id", "name"], :name => "index_suggestions_on_naming_project_id_and_name", :unique => true
+  add_index "suggestions", ["user_id"], :name => "index_suggestions_on_user_id"
 
   create_table "users", :force => true do |t|
     t.string   "authentication_token", :null => false

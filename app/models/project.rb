@@ -1,4 +1,5 @@
 class Project < ActiveRecord::Base
+  belongs_to :user
   has_many :suggestions, dependent: :destroy
 
   validates :key, presence: true, uniqueness: true
@@ -21,6 +22,10 @@ class Project < ActiveRecord::Base
 
   def display_name
     "project #{key[0..10]}..."
+  end
+
+  def owned_by?(user)
+    self.user == user
   end
 
   private

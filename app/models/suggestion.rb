@@ -1,4 +1,5 @@
 class Suggestion < ActiveRecord::Base
+  belongs_to :user
   belongs_to :project
 
   validates :name, presence: true, uniqueness: {scope: :project_id}
@@ -12,6 +13,10 @@ class Suggestion < ActiveRecord::Base
   end
 
   def destroyable_by?(user)
-    destroyable? and ip == user
+    destroyable? and owned_by?(user)
+  end
+
+  def owned_by?(user)
+    self.user == user
   end
 end

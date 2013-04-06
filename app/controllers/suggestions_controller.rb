@@ -7,8 +7,9 @@ class SuggestionsController < ApplicationController
   end
 
   def create
-    @suggestion = scope.build params[:suggestion]
-    @suggestion.ip = request.remote_addr
+    @suggestion      = scope.build params[:suggestion]
+    @suggestion.ip   = request.remote_addr
+    @suggestion.user = current_user
 
     if @suggestion.save
       flash[:notice] = "Your suggestion '#{@suggestion.name}' has been added."
