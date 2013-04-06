@@ -24,8 +24,10 @@
         <tr>
           <td><%= suggestion.name %></td>
           <td>
-            <%= simple_form_for [@naming_project, suggestion], method: :delete, html: {class: 'form-inline'} do |f| %>
-              <%= f.button :submit, 'Delete', class: 'btn btn-mini btn-danger' %>
+            <% if suggestion.destroyable? %>
+              <%= simple_form_for [@naming_project, suggestion], method: :delete, html: {class: 'form-inline'} do |f| %>
+                <%= f.button :submit, 'Delete', class: 'btn btn-mini btn-danger' %>
+              <% end %>
             <% end %>
           </td>
         </tr>
