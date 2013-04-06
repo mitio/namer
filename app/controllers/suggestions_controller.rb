@@ -1,6 +1,10 @@
 class SuggestionsController < ApplicationController
   respond_to :html
-  before_filter :load_project
+  before_filter :load_project, except: :index
+
+  def index
+    @suggestions = current_user.suggestions
+  end
 
   def new
     @suggestion = scope.build

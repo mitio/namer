@@ -1,0 +1,24 @@
+<h1>Your Suggestions</h1>
+
+<% if @suggestions.any? %>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Project</th>
+        <th>Suggestion</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @suggestions.each do |suggestion| %>
+        <tr>
+          <td><%= link_to suggestion.project.display_name.humanize, suggestion.project %></td>
+          <td><%= link_to suggestion.name, suggestion.project %></td>
+          <td><%= render 'suggestions/delete_button', suggestion: suggestion %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+<% else %>
+  <p>You have not made any name suggestions yet.</p>
+<% end %>
