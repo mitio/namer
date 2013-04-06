@@ -1,6 +1,11 @@
 <h2>
   <%= @project.display_name.humanize %>
-  <small><%= link_to '(edit)', edit_project_path(@project) %></small>
+
+  <% if @project.owned_by? current_user %>
+    <small>
+      <%= link_to '(edit)', edit_project_path(@project) %>
+    </small>
+  <% end %>
 </h2>
 
 <% if @project.description.present? %>
