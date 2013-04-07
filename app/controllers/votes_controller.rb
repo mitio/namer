@@ -1,12 +1,18 @@
 class VotesController < ApplicationController
   before_filter :load_project_suggestion_and_vote
 
-  def create
+  def save
     @vote.cast params[:vote]
-    redirect_to @project
+
+    if request.xhr?
+      render action: 'save'
+    else
+      redirect_to @project
+    end
   end
 
-  alias update create
+  alias create save
+  alias update save
 
   private
 

@@ -26,13 +26,7 @@
     </thead>
     <tbody>
       <% @project.suggestions.in_alphabetical_order.each do |suggestion| %>
-        <tr>
-          <td>
-            <%= suggestion.name %>
-            <%= render 'suggestions/delete_button', suggestion: suggestion %>
-          </td>
-          <td><%= render 'votes/form', suggestion: suggestion %></td>
-        </tr>
+        <%= render suggestion %>
       <% end %>
     </tbody>
   </table>

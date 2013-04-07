@@ -1,0 +1,7 @@
+<tr id="<%= dom_id suggestion %>">
+  <td>
+    <%= suggestion.name %>
+    <%= render 'suggestions/delete_button', suggestion: suggestion %>
+  </td>
+  <td><%= render 'votes/form', suggestion: suggestion %></td>
+</tr>
