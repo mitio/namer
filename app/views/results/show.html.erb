@@ -2,11 +2,7 @@
   <%= link_to @project.display_name.humanize, @project %>
 </h2>
 
-<% if @project.description.present? %>
-  <blockquote>
-    <%= simple_format @project.description %>
-  </blockquote>
-<% end %>
+<%= render 'projects/description' %>
 
 <h4><%= t '.ranked_name_suggestions' %></h4>
 

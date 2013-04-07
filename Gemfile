@@ -7,6 +7,8 @@ gem 'sass-twitter-bootstrap'
 gem 'simple_form'
 gem 'dalli'
 gem 'rails-i18n'
+gem 'sanitize'
+gem 'rdiscount'
 
 group :production do
   gem 'pg'

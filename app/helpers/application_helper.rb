@@ -1,3 +1,5 @@
+require_dependency 'markup'
+
 module ApplicationHelper
   def top_navigation_urls
     {
@@ -21,5 +23,9 @@ module ApplicationHelper
     Vote.vote_types.map do |type|
       [t("vote_types.#{type}"), type]
     end
+  end
+
+  def markup(text)
+    Markup.format text
   end
 end

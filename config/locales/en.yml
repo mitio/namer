@@ -60,7 +60,7 @@ en:
       save: 'Save changes'
       back_to_project: 'Go back to the project'
     form_fields:
-      simple_html_allowed: 'You can use simple HTML here. Paragraphs will be automatically created for you.'
+      formatting_hints: 'This text will be formatted as Markdown.'
 
   suggestions:
     flashes:

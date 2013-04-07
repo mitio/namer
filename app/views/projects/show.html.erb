@@ -9,11 +9,7 @@
   <% end %>
 </h2>
 
-<% if @project.description.present? %>
-  <blockquote>
-    <%= simple_format @project.description %>
-  </blockquote>
-<% end %>
+<%= render 'description' %>
 
 <h4><%= t '.name_suggestions' %></h4>
 

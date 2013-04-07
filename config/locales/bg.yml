@@ -60,7 +60,7 @@ bg:
       save: 'Съхранение на промените'
       back_to_project: 'Обратно към проекта'
     form_fields:
-      simple_html_allowed: 'В това поле може да използвате прост HTML. Системата ще добави автоматично параграфи.'
+      formatting_hints: 'Това поле се форматира според правилата на Markdown.'
 
   suggestions:
     flashes:
