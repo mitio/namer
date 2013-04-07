@@ -7,3 +7,91 @@ en:
     pass: 'Pass'
     ok: 'OK'
     awesome: 'Awesome!'
+
+  application:
+    name: 'Namer'
+    saved_indicator:
+      saved: 'Saved!'
+
+  nav:
+    home: 'Home'
+    new_project: 'New Project'
+    projects: 'Your Projects'
+    suggestions: 'Your Suggestions'
+    about: 'About'
+
+  project:
+    display_name: 'project %{key}...'
+
+  home:
+    index:
+      welcome: 'Welcome to Namer!'
+      intro_html: 'Collaborative name brainstorming via<br />anonymous name suggestions and simple voting.'
+      new_project: 'Start a new project →'
+
+  projects:
+    flashes:
+      created: 'The naming project has been created.'
+      updated: 'Your changes have been saved.'
+    new:
+      new_project: 'New Project'
+      create: 'Create your project'
+      go_home: 'Go to the homepage'
+    show:
+      edit: '(edit)'
+      name_suggestions: 'Current name suggestions'
+      name: 'Name'
+      your_vote: 'What do you think?'
+      no_suggestions: 'No name suggestions yet.'
+      add_suggestion: 'Add your own!'
+      suggest_name: 'Suggest a new name'
+    index:
+      projects: 'Your Projects'
+      create_new: 'Create a new project'
+      project: 'Project'
+      suggestions: 'Suggestions'
+      actions: 'Actions'
+      edit: 'Edit'
+      results: 'View results'
+      no_projects: 'You have not created any projects yet.'
+    edit:
+      edit: 'Edit Project'
+      save: 'Save changes'
+      back_to_project: 'Go back to the project'
+    form_fields:
+      simple_html_allowed: 'You can use simple HTML here. Paragraphs will be automatically created for you.'
+
+  suggestions:
+    flashes:
+      added: 'Your suggestion "%{name}" has been added.'
+      deleted: 'The suggestion "%{name}" has been deleted.'
+      cant_delete: 'Can not delete a suggestion which has been voted for.'
+    index:
+      suggestions: 'Your Suggestions'
+      project: 'Project'
+      suggestion: 'Suggestion'
+      actions: 'Actions'
+      no_suggestions: 'You have not made any name suggestions yet.'
+    delete_button:
+      delete: 'Delete'
+    new:
+      new_suggestion_html: 'New name suggestion for <a href="%{url}">%{project}</a>'
+      save: 'Suggest this name'
+      back_to_project: 'Back to the project'
+
+  votes:
+    form:
+      save: 'Save'
+
+  pages:
+    about:
+      about: 'About Namer'
+      built_by_dimitar_html: 'Quickly thrown together by <a href="%{url}">Dimitar Dimitrov</a>.'
+      source_on_github_html: 'You can find the <a href="%{url}">full source code on GitHub</a>.'
+
+  activerecord:
+    attributes:
+      project:
+        description: 'Description'
+      suggestion:
+        name: 'Name'

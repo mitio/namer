@@ -1,14 +1,14 @@
-<h1>Your Projects</h1>
+<h1><%= t '.projects' %></h1>
 
-<p><%= link_to 'Create a new project', new_project_path, class: 'btn btn-mini btn-success' %></p>
+<p><%= link_to t('.create_new'), new_project_path, class: 'btn btn-mini btn-success' %></p>
 
 <% if @projects.any? %>
   <table class="table projects">
     <thead>
       <tr>
-        <th>Project</th>
-        <th>Suggestions</th>
-        <th>Actions</th>
+        <th><%= t '.project' %></th>
+        <th><%= t '.suggestions' %></th>
+        <th><%= t '.actions' %></th>
       </tr>
     </thead>
     <tbody>
@@ -21,13 +21,13 @@
             <%= project.suggestions.size %>
           </td>
           <td class="actions">
-            <%= link_to 'Edit', [:edit, project] %>
-            <%= link_to 'View results', 'TODO' %>
+            <%= link_to t('.edit'), [:edit, project] %>
+            <%= link_to t('.results'), 'TODO' %>
           </td>
         </tr>
       <% end %>
     </tbody>
   </table>
 <% else %>
-  <p>You have not created any projects yet.</p>
+  <p><%= t '.no_projects' %></p>
 <% end %>

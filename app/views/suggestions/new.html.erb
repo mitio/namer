@@ -1,11 +1,11 @@
 <%= simple_form_for [@project, @suggestion], html: {class: 'form-vertical'} do |f| %>
   <fieldset>
-    <legend>New name suggestion for <%= link_to @project.display_name, @project %></legend>
+    <legend><%= t '.new_suggestion_html', project: @project.display_name, url: url_for(@project) %></legend>
     <%= f.input :name, autofocus: true %>
   </fieldset>
 
   <div class="form-actions">
-    <%= f.button :submit, 'Suggest this name', class: 'btn btn-small btn-success' %>
-    or <%= link_to 'Back to the project', project_path(@project) %>
+    <%= f.button :submit, t('.save'), class: 'btn btn-small btn-success' %>
+    or <%= link_to t('.back_to_project'), project_path(@project) %>
   </div>
 <% end %>

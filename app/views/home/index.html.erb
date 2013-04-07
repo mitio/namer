@@ -1,5 +1,5 @@
 <div class="intro">
-  <h1>Welcome to Namer!</h1>
-  <p class="lead">Collaborative name brainstorming via<br />anonymous name suggestions and simple voting.</p>
-  <%= link_to 'Start a new project →', new_project_path, class: 'btn btn-large btn-success' %>
+  <h1><%= t '.welcome' %></h1>
+  <p class="lead"><%= t '.intro_html' %></p>
+  <%= link_to t('.new_project'), new_project_path, class: 'btn btn-large btn-success' %>
 </div>

@@ -3,7 +3,7 @@
 
   <% if @project.owned_by? current_user %>
     <small>
-      <%= link_to '(edit)', edit_project_path(@project) %>
+      <%= link_to t('.edit'), edit_project_path(@project) %>
     </small>
   <% end %>
 </h2>
@@ -14,14 +14,14 @@
   </blockquote>
 <% end %>
 
-<h4>Current name suggestions</h4>
+<h4><%= t '.name_suggestions' %></h4>
 
 <% if @project.suggestions.any? %>
   <table class="table suggestions">
     <thead>
       <tr>
-        <th class="name">Name</th>
-        <th class="vote">What do you think?</th>
+        <th class="name"><%= t '.name' %></th>
+        <th class="vote"><%= t '.your_vote' %></th>
       </tr>
     </thead>
     <tbody>
@@ -32,11 +32,11 @@
   </table>
 <% else %>
   <p>
-    No name suggestions yet.
-    <%= link_to 'Add your own!', new_project_suggestion_path(@project) %>
+    <%= t '.no_suggestions' %>
+    <%= link_to t('.add_suggestion'), new_project_suggestion_path(@project) %>
   </p>
 <% end %>
 
 <p>
-  <%= link_to 'Suggest a new name', new_project_suggestion_path(@project), class: 'btn btn-small btn-success' %>
+  <%= link_to t('.suggest_name'), new_project_suggestion_path(@project), class: 'btn btn-small btn-success' %>
 </p>

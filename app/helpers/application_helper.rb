@@ -1,11 +1,11 @@
 module ApplicationHelper
   def top_navigation_urls
     {
-      'Home'                    => root_path,
-      'New Project'             => new_project_path,
-      'Your Projects'           => projects_path,
-      'Your Suggestions'        => suggestions_path,
-      'About'                   => about_pages_path,
+      I18n.t('nav.home')                    => root_path,
+      I18n.t('nav.new_project')             => new_project_path,
+      I18n.t('nav.projects')                => projects_path,
+      I18n.t('nav.suggestions')             => suggestions_path,
+      I18n.t('nav.about')                   => about_pages_path,
     }
   end
 

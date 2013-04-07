@@ -16,7 +16,7 @@ class SuggestionsController < ApplicationController
     @suggestion.user = current_user
 
     if @suggestion.save
-      flash[:notice] = "Your suggestion '#{@suggestion.name}' has been added."
+      flash[:notice] = flash_message 'added', name: @suggestion.name
     end
 
     respond_with @suggestion, location: project_url
@@ -27,9 +27,9 @@ class SuggestionsController < ApplicationController
 
     if @suggestion.destroyable_by? current_user
       @suggestion.destroy
-      redirect_to project_url, notice: "The suggestion '#{@suggestion.name}' was deleted."
+      redirect_to project_url, notice: flash_message('deleted', name: @suggestion.name)
     else
-      redirect_to project_url, alert: 'Can not delete a suggestion which has been voted for.'
+      redirect_to project_url, alert: flash_message('cant_delete')
     end
   end
 

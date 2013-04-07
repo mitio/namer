@@ -1,5 +1,5 @@
 <%= simple_form_for [suggestion.project, suggestion, suggestion.vote_by(current_user)], remote: true, html: {class: 'vote'} do |f| %>
   <%= f.input :vote, as: :radio, collection: vote_types %>
-  <%= f.button :submit, 'Save' %>
+  <%= f.button :submit, t('.save') %>
 <% end %>
 <%= render 'application/saved_indicator' if request.xhr? %>

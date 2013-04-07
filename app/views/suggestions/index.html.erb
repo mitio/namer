@@ -1,12 +1,12 @@
-<h1>Your Suggestions</h1>
+<h1><%= t '.suggestions' %></h1>
 
 <% if @suggestions.any? %>
   <table class="table">
     <thead>
       <tr>
-        <th>Project</th>
-        <th>Suggestion</th>
-        <th>Actions</th>
+        <th><%= t '.project' %></th>
+        <th><%= t '.suggestion' %></th>
+        <th><%= t '.actions' %></th>
       </tr>
     </thead>
     <tbody>
@@ -20,5 +20,5 @@
     </tbody>
   </table>
 <% else %>
-  <p>You have not made any name suggestions yet.</p>
+  <p><%= t '.no_suggestions' %></p>
 <% end %>

@@ -15,7 +15,7 @@ class ProjectsController < ApplicationController
     @project.ip = request.remote_addr
 
     if @project.save
-      flash[:notice] = 'The naming project has been created.'
+      flash[:notice] = flash_message('created')
     end
 
     respond_with @project
@@ -30,7 +30,7 @@ class ProjectsController < ApplicationController
 
   def update
     if @project.update_attributes params[:project]
-      flash[:notice] = 'Your changes have been saved.'
+      flash[:notice] = flash_message('updated')
     end
 
     respond_with @project
