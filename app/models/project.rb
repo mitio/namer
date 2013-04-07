@@ -21,7 +21,7 @@ class Project < ActiveRecord::Base
   end
 
   def display_name
-    I18n.t('project.display_name', key: key[0..10])
+    I18n.t('project.display_name', key: key[0...6])
   end
 
   def owned_by?(user)
