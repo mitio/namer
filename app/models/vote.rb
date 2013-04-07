@@ -1,6 +1,6 @@
 class Vote < ActiveRecord::Base
   cattr_reader :vote_types
-  @@vote_types = %w( no ok awesome )
+  @@vote_types = %w( veto pass ok awesome )
 
   belongs_to :user
   belongs_to :suggestion

@@ -3,6 +3,7 @@
 
 en:
   vote_types:
-    no: 'Nope'
+    veto: 'Never'
+    pass: 'Pass'
     ok: 'Could work'
     awesome: 'Awesome!'
