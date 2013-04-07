@@ -1,6 +1,6 @@
 == Namer
 
-This is a small application that allows for a group of people to brainstorm a name for a project, activity or anything at all.
+This is a small application that allows a group of people to brainstorm a name for something without gathering into the same room at the same time.
 
 === Features
 
@@ -8,4 +8,4 @@ This is a small application that allows for a group of people to brainstorm a na
 * Anonymous name suggestions
 * Anonymous votes (with minimal security)
 
-Currently, the project implements very minimal security, as trust among the users is assumed.
+Currently, the project implements very minimal security, as trust among users is assumed.
