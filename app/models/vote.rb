@@ -10,13 +10,13 @@ class Vote < ActiveRecord::Base
   validates :vote, :user_id, :suggestion_id, presence: true
   validates :vote, inclusion: {in: vote_types}
 
-  attr_accessible :vote
+  attr_accessible :vote, :reason
   after_initialize :set_default_vote_type
 
   def cast(params)
     self.attributes = params
 
-    if vote == 'pass'
+    if vote == 'pass' and reason.blank?
       if persisted?
         destroy
       else

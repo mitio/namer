@@ -93,6 +93,7 @@ bg:
 
   votes:
     form:
+      reason: 'Вашият коментар'
       save: 'Запази'
 
   pages:
@@ -115,3 +116,6 @@ bg:
         description: 'Описание'
       suggestion:
         name: 'Име'
+      vote:
+        vote: 'Глас'
+        reason: 'Причина'

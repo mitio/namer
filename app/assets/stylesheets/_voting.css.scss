@@ -3,7 +3,15 @@ form.vote {
 	white-space: nowrap;
 	margin: 0;
 	.control-group {
+		float: left;
 		margin: 0;
+		&.vote_reason {
+			input {
+				margin: 0;
+				width: 170px;
+				padding: 0 4px;
+			}
+		}
 	}
 	.control-label {
 		display: none;

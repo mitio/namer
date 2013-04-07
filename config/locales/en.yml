@@ -93,6 +93,7 @@ en:
 
   votes:
     form:
+      reason: 'Your comments'
       save: 'Save'
 
   pages:
@@ -115,3 +116,6 @@ en:
         description: 'Description'
       suggestion:
         name: 'Name'
+      vote:
+        vote: 'Vote'
+        reason: 'Reason'
