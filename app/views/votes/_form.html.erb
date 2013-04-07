@@ -2,3 +2,4 @@
   <%= f.input :vote, as: :radio, collection: vote_types %>
   <%= f.button :submit, 'Save' %>
 <% end %>
+<%= render 'application/saved_indicator' if request.xhr? %>

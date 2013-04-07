@@ -1,1 +1,4 @@
 $('#<%= dom_id @vote.suggestion %>').replaceWith(<%= render(@vote.suggestion).to_json.html_safe %>);
+setTimeout(function () {
+	$('span.saved').fadeOut('slow', function () { $(this).remove(); });
+}, 3000);
