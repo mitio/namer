@@ -11,4 +11,11 @@ class Vote < ActiveRecord::Base
   validates :vote, inclusion: {in: vote_types}
 
   attr_accessible :vote
+  after_initialize :set_default_vote_type
+
+  private
+
+  def set_default_vote_type
+    self.vote ||= 'pass' unless persisted?
+  end
 end
