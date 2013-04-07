@@ -22,15 +22,16 @@
       <tr>
         <th class="name">Name</th>
         <th class="vote">What do you think?</th>
-        <th class="actions">Actions</th>
       </tr>
     </thead>
     <tbody>
       <% @project.suggestions.in_alphabetical_order.each do |suggestion| %>
         <tr>
-          <td><%= suggestion.name %></td>
+          <td>
+            <%= suggestion.name %>
+            <%= render 'suggestions/delete_button', suggestion: suggestion %>
+          </td>
           <td><%= render 'votes/form', suggestion: suggestion %></td>
-          <td><%= render 'suggestions/delete_button', suggestion: suggestion %></td>
         </tr>
       <% end %>
     </tbody>

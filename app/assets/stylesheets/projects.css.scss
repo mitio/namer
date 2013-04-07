@@ -14,12 +14,12 @@
 		width: 50%;
 	}
 	.btn-danger {
-		background: #ddd;
-		color: #666;
+		height: 18px;
+		line-height: 16px;
+		background: #eee;
+		color: #777;
 		text-shadow: none;
-	}
-	tr:hover {
-		.btn-danger {
+		&:hover {
 			background: #e22;
 			color: #FFF;
 			text-shadow: 0 -1px 0 #222;

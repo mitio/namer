@@ -1,5 +1,5 @@
 <% if suggestion.destroyable_by? current_user %>
-  <%= simple_form_for [suggestion.project, suggestion], method: :delete, html: {class: 'form-inline'} do |f| %>
+  <%= simple_form_for [suggestion.project, suggestion], method: :delete, html: {class: 'form-inline delete-suggestion'} do |f| %>
     <%= f.button :submit, 'Delete', class: 'btn btn-mini btn-danger' %>
   <% end %>
 <% end %>
