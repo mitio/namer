@@ -85,6 +85,7 @@ en:
       ranked_name_suggestions: 'Ranked Name Suggestions'
       name: 'Name'
       rank: 'Rank'
+      no_suggestions: 'No suggestions yet.'
       back_to_project: '← Back to the project'
       vetoes:
         one: 'Has %{count} veto'

@@ -85,6 +85,7 @@ bg:
       ranked_name_suggestions: 'Ранглиста на предложенията'
       name: 'Име'
       rank: 'Ранг'
+      no_suggestions: 'Все още няма предложения.'
       back_to_project: '← Обратно към проекта'
       vetoes:
         one: 'Има %{count} глас "вето"'
