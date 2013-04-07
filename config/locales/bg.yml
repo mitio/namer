@@ -1,0 +1,97 @@
+bg:
+  texts:
+    or: 'или'
+
+  vote_types:
+    veto: 'Вето'
+    pass: 'Без мнение'
+    ok: 'Окей'
+    awesome: 'Супер!'
+
+  application:
+    name: 'Именовчик'
+    saved_indicator:
+      saved: 'Запазено'
+
+  nav:
+    home: 'Начало'
+    new_project: 'Нов проект'
+    projects: 'Вашите проекти'
+    suggestions: 'Вашите предложения'
+    about: 'За приложението'
+
+  project:
+    display_name: 'Проект %{key}...'
+
+  home:
+    index:
+      welcome: 'Привет!'
+      intro_html: 'Дистрибутиран брейнсторминг на имена чрез<br />анонимни предложения и проста система за гласуване.'
+      new_project: 'Започнете нов проект →'
+
+  projects:
+    flashes:
+      created: 'Проектът е създаден успешно.'
+      updated: 'Промените ви са съхнанени.'
+    new:
+      new_project: 'Нов проект'
+      create: 'Създайте проекта'
+      go_home: 'Обратно към началната страница'
+    show:
+      edit: '(редакция)'
+      name_suggestions: 'Текущи предложения'
+      name: 'Име'
+      your_vote: 'Вашата оценка'
+      no_suggestions: 'Все още няма предложения.'
+      add_suggestion: 'Добавете вашето предложение!'
+      suggest_name: 'Предложете ново име'
+    index:
+      projects: 'Вашите проекти'
+      create_new: 'Създайте нов проект'
+      project: 'Проект'
+      suggestions: 'Предложения'
+      actions: 'Действия'
+      edit: 'Редакция'
+      results: 'Резултати'
+      no_projects: 'Все още нямате създадени проекти.'
+    edit:
+      edit: 'Редакция на проект'
+      save: 'Съхранение на промените'
+      back_to_project: 'Обратно към проекта'
+    form_fields:
+      simple_html_allowed: 'В това поле може да използвате прост HTML. Системата ще добави автоматично параграфи.'
+
+  suggestions:
+    flashes:
+      added: 'Предложеното от вас име "%{name}" е добавено.'
+      deleted: 'Предложението "%{name}" е изтрито.'
+      cant_delete: 'Предложение, за което има гласове, не може да бъде изтрито.'
+    index:
+      suggestions: 'Вашите предложения'
+      project: 'Проект'
+      suggestion: 'Предложение'
+      actions: 'Действия'
+      no_suggestions: 'Все още нямате направени предложения.'
+    delete_button:
+      delete: 'Изтрий'
+    new:
+      new_suggestion_html: 'Ново предложение за <a href="%{url}">%{project}</a>'
+      save: 'Добавете предложението'
+      back_to_project: 'Обратно към проекта'
+
+  votes:
+    form:
+      save: 'Запази'
+
+  pages:
+    about:
+      about: 'За проекта'
+      built_by_dimitar_html: 'Сглобено набързо от <a href="%{url}">Димитър Димитров</a>.'
+      source_on_github_html: 'Можете да намерите <a href="%{url}">пълния код на приложението в GitHub</a>.'
+
+  activerecord:
+    attributes:
+      project:
+        description: 'Описание'
+      suggestion:
+        name: 'Име'
