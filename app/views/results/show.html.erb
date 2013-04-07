@@ -27,7 +27,7 @@
             <% if suggestion.votes_with_reason.any? %>
               <div class="comments">
                 <% suggestion.votes_with_reason.each do |vote| %>
-                  <p><%= t "vote_types.#{vote.vote}" %>: <%= vote.reason %></p>
+                  <p><%= t "vote_types.#{vote.vote}" %> — <%= vote.reason %></p>
                 <% end %>
               </div>
             <% end %>
