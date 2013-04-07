@@ -5,6 +5,7 @@ Namer::Application.routes.draw do
     resources :suggestions do
       resources :votes
     end
+    resource :results
   end
 
   resources :suggestions, only: :index

@@ -39,6 +39,7 @@ en:
       go_home: 'Go to the homepage'
     show:
       edit: '(edit)'
+      results: '(results)'
       name_suggestions: 'Current name suggestions'
       name: 'Name'
       your_vote: 'What do you think?'
@@ -78,6 +79,16 @@ en:
       new_suggestion_html: 'New name suggestion for <a href="%{url}">%{project}</a>'
       save: 'Suggest this name'
       back_to_project: 'Back to the project'
+
+  results:
+    show:
+      ranked_name_suggestions: 'Ranked Name Suggestions'
+      name: 'Name'
+      rank: 'Rank'
+      back_to_project: '← Back to the project'
+      vetoes:
+        one: 'Has %{count} veto'
+        other: 'Has %{count} vetoes'
 
   votes:
     form:

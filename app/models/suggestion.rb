@@ -20,6 +20,18 @@ class Suggestion < ActiveRecord::Base
     vote
   end
 
+  def rank
+    votes.select(&:persisted?).sum(&:rank)
+  end
+
+  def vetoes
+    votes.to_a.count(&:veto?)
+  end
+
+  def has_veto?
+    vetoes > 0
+  end
+
   def destroyable?
     votes.select(&:persisted?).none?
   end

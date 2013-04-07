@@ -27,6 +27,18 @@ class Vote < ActiveRecord::Base
     end
   end
 
+  def rank
+    case vote
+    when 'ok'       then 1
+    when 'awesome'  then 3
+    else                 0
+    end
+  end
+
+  def veto?
+    vote == 'veto'
+  end
+
   private
 
   def set_default_vote_type

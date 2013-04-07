@@ -21,8 +21,8 @@
             <%= project.suggestions.size %>
           </td>
           <td class="actions">
-            <%= link_to t('.edit'), [:edit, project] %>
-            <%= link_to t('.results'), 'TODO' %>
+            <%= link_to t('.edit'), edit_project_path(project) %>
+            <%= link_to t('.results'), project_results_path(project) %>
           </td>
         </tr>
       <% end %>

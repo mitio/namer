@@ -4,6 +4,7 @@
   <% if @project.owned_by? current_user %>
     <small>
       <%= link_to t('.edit'), edit_project_path(@project) %>
+      <%= link_to t('.results'), project_results_path(@project) %>
     </small>
   <% end %>
 </h2>

@@ -28,6 +28,10 @@ class Project < ActiveRecord::Base
     self.user == user
   end
 
+  def ranked_suggestions
+    suggestions.sort_by { |suggestion| -suggestion.rank }
+  end
+
   private
 
   def set_key

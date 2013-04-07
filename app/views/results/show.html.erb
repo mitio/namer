@@ -1,0 +1,42 @@
+<h2>
+  <%= link_to @project.display_name.humanize, @project %>
+</h2>
+
+<% if @project.description.present? %>
+  <blockquote>
+    <%= simple_format @project.description %>
+  </blockquote>
+<% end %>
+
+<h4><%= t '.ranked_name_suggestions' %></h4>
+
+<% if @project.ranked_suggestions.any? %>
+  <table class="table ranked-suggestions">
+    <thead>
+      <tr>
+        <th class="name"><%= t '.name' %></th>
+        <th class="rank"><%= t '.rank' %></th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @project.ranked_suggestions.each do |suggestion| %>
+        <tr>
+          <td><%= suggestion.name %></td>
+          <td><%= suggestion.rank %></td>
+          <td>
+            <% if suggestion.has_veto? %>
+              <span class="vetoes"><%= t '.vetoes', count: suggestion.vetoes %></span>
+            <% end %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+<% else %>
+  <p>
+    <%= t '.no_suggestions' %>
+  </p>
+<% end %>
+
+<p><%= link_to t('.back_to_project'), @project %></p>
