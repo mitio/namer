@@ -1,0 +1,22 @@
+form.vote {
+	white-space: nowrap;
+	margin: 0;
+	.control-group {
+		margin: 0;
+	}
+	.control-label {
+		display: none;
+	}
+	.controls {
+		padding: 0 2px;
+		overflow: hidden;
+		label.radio {
+			float: left;
+			padding-top: 0;
+			margin: 0 20px 0 0;
+		}
+	}
+	input[type=submit] {
+		display: none;
+	}
+}

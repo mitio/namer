@@ -5,5 +5,5 @@ en:
   vote_types:
     veto: 'Never'
     pass: 'Pass'
-    ok: 'Could work'
+    ok: 'OK'
     awesome: 'Awesome!'
