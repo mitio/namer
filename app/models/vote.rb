@@ -39,6 +39,10 @@ class Vote < ActiveRecord::Base
     vote == 'veto'
   end
 
+  def has_reason?
+    reason.present?
+  end
+
   private
 
   def set_default_vote_type

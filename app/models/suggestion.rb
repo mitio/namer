@@ -43,4 +43,8 @@ class Suggestion < ActiveRecord::Base
   def owned_by?(user)
     self.user == user
   end
+
+  def votes_with_reason
+    votes.select(&:has_reason?)
+  end
 end
