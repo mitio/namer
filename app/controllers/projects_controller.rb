@@ -26,7 +26,6 @@ class ProjectsController < ApplicationController
   end
 
   def edit
-    @project = scope.by_key params[]
   end
 
   def update
