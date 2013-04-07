@@ -9,7 +9,7 @@ class Suggestion < ActiveRecord::Base
 
   scope :in_alphabetical_order, order(arel_table[:name].asc)
 
-  def vote_for(user)
+  def vote_by(user)
     vote = votes.where(user_id: user.id).first
 
     unless vote
