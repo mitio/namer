@@ -9,7 +9,10 @@ class User < ActiveRecord::Base
     def from_auth_token(auth_token, options = {})
       user = where(authentication_token: auth_token.to_s).first
 
-      unless user
+      if user
+        user.ip = options[:ip] if options[:ip].present?
+        user.save if user.changed?
+      else
         user = new
         user.authentication_token = auth_token
         user.ip = options[:ip]
