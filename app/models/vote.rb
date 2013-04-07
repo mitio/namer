@@ -13,6 +13,20 @@ class Vote < ActiveRecord::Base
   attr_accessible :vote
   after_initialize :set_default_vote_type
 
+  def cast(params)
+    self.attributes = params
+
+    if vote == 'pass'
+      if persisted?
+        destroy
+      else
+        true
+      end
+    else
+      save
+    end
+  end
+
   private
 
   def set_default_vote_type
