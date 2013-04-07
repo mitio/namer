@@ -8,3 +8,21 @@
 		}
 	}
 }
+
+.table.suggestions {
+	.name {
+		width: 50%;
+	}
+	.btn-danger {
+		background: #ddd;
+		color: #666;
+		text-shadow: none;
+	}
+	tr:hover {
+		.btn-danger {
+			background: #e22;
+			color: #FFF;
+			text-shadow: 0 -1px 0 #222;
+		}
+	}
+}

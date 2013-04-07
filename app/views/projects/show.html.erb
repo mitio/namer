@@ -17,12 +17,12 @@
 <h4>Current name suggestions</h4>
 
 <% if @project.suggestions.any? %>
-  <table class="table">
+  <table class="table suggestions">
     <thead>
       <tr>
-        <th>Name</th>
-        <th>What do you think?</th>
-        <th>Actions</th>
+        <th class="name">Name</th>
+        <th class="vote">What do you think?</th>
+        <th class="actions">Actions</th>
       </tr>
     </thead>
     <tbody>
