@@ -21,7 +21,7 @@ class Suggestion < ActiveRecord::Base
   end
 
   def destroyable?
-    votes.none?
+    votes.select(&:persisted?).none?
   end
 
   def destroyable_by?(user)
