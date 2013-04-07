@@ -2,7 +2,7 @@ module UserManagement
   def load_or_create_user
     if cookies[:auth_token].present?
       if params[:cookie].present?
-        redirect_to url_for(params)
+        redirect_to url_for(params.except(:cookie))
       else
         @current_user = User.from_auth_token cookies[:auth_token], ip: request.remote_ip
       end
