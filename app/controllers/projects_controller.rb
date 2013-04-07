@@ -12,7 +12,7 @@ class ProjectsController < ApplicationController
 
   def create
     @project = scope.build params[:project]
-    @project.ip = request.remote_addr
+    @project.ip = request.remote_ip
 
     if @project.save
       flash[:notice] = flash_message('created')

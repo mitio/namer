@@ -4,7 +4,7 @@ module UserManagement
       if params[:cookie].present?
         redirect_to url_for(params)
       else
-        @current_user = User.from_auth_token cookies[:auth_token], ip: request.remote_addr
+        @current_user = User.from_auth_token cookies[:auth_token], ip: request.remote_ip
       end
     elsif params[:cookie].present?
       redirect_to privacy_pages_path

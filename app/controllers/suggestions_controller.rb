@@ -12,7 +12,7 @@ class SuggestionsController < ApplicationController
 
   def create
     @suggestion      = scope.build params[:suggestion]
-    @suggestion.ip   = request.remote_addr
+    @suggestion.ip   = request.remote_ip
     @suggestion.user = current_user
 
     if @suggestion.save
