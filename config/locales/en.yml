@@ -2,6 +2,9 @@
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
+  texts:
+    or: 'or'
+
   vote_types:
     veto: 'Never'
     pass: 'Pass'

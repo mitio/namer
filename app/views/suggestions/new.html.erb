@@ -6,6 +6,7 @@
 
   <div class="form-actions">
     <%= f.button :submit, t('.save'), class: 'btn btn-small btn-success' %>
-    or <%= link_to t('.back_to_project'), project_path(@project) %>
+    <%= t 'texts.or' %>
+    <%= link_to t('.back_to_project'), project_path(@project) %>
   </div>
 <% end %>
