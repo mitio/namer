@@ -12,5 +12,6 @@ Namer::Application.routes.draw do
 
   resource :pages, path: '/' do
     get :about, on: :collection
+    get :privacy, on: :collection
   end
 end
