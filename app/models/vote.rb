@@ -9,7 +9,7 @@ class Vote < ActiveRecord::Base
 
   validates :vote, :user_id, :suggestion_id, presence: true
   validates :vote, inclusion: {in: vote_types}
-  validates :reason, presence: true, if: :veto?
+  validate :veto_requires_a_reason
 
   attr_accessible :vote, :reason
   after_initialize :set_default_vote_type
@@ -45,6 +45,12 @@ class Vote < ActiveRecord::Base
   end
 
   private
+
+  def veto_requires_a_reason
+    if veto? and reason.blank?
+      errors.add :reason, :required_for_veto
+    end
+  end
 
   def set_default_vote_type
     self.vote ||= 'pass' unless persisted?

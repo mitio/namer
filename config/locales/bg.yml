@@ -119,3 +119,8 @@ bg:
       vote:
         vote: 'Глас'
         reason: 'Причина'
+
+  errors:
+    attributes:
+      reason:
+        required_for_veto: 'укажете причина за ветото'

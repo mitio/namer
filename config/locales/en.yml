@@ -119,3 +119,8 @@ en:
       vote:
         vote: 'Vote'
         reason: 'Reason'
+
+    errors:
+      attributes:
+        reason:
+          required_for_veto: 'a veto requires a reason'
