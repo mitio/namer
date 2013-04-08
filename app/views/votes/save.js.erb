@@ -1,7 +1,2 @@
 $('#<%= dom_id @vote.suggestion %>').replaceWith(<%= render(@vote.suggestion, vote: @vote).to_json.html_safe %>);
-(function () {
-	var savedNotifications = $('#<%= dom_id @vote.suggestion %> span.saved');
-	setTimeout(function () {
-		savedNotifications.fadeOut('slow', function () { $(this).remove(); });
-	}, 3000);
-})();
+delayedFadeOut($('#<%= dom_id @vote.suggestion %> span.saved'));
