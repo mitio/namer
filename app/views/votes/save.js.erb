@@ -1,4 +1,4 @@
-$('#<%= dom_id @vote.suggestion %>').replaceWith(<%= render(@vote.suggestion).to_json.html_safe %>);
+$('#<%= dom_id @vote.suggestion %>').replaceWith(<%= render(@vote.suggestion, vote: @vote).to_json.html_safe %>);
 (function () {
 	var savedNotifications = $('#<%= dom_id @vote.suggestion %> span.saved');
 	setTimeout(function () {

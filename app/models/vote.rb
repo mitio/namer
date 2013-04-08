@@ -9,6 +9,7 @@ class Vote < ActiveRecord::Base
 
   validates :vote, :user_id, :suggestion_id, presence: true
   validates :vote, inclusion: {in: vote_types}
+  validates :reason, presence: true, if: :veto?
 
   attr_accessible :vote, :reason
   after_initialize :set_default_vote_type
