@@ -40,6 +40,7 @@ en:
     show:
       edit: '(edit)'
       results: '(results)'
+    suggestions_with_voting:
       name_suggestions: 'Current name suggestions'
       name: 'Name'
       your_vote: 'What do you think?'
@@ -61,6 +62,11 @@ en:
       back_to_project: 'Go back to the project'
     form_fields:
       formatting_hints: 'This text will be formatted as Markdown.'
+    ranked_suggestions:
+      ranked_name_suggestions: 'Ranked Name Suggestions'
+      name: 'Name'
+      rank: 'Rank'
+      no_suggestions: 'No suggestions yet.'
 
   suggestions:
     flashes:
@@ -82,10 +88,6 @@ en:
 
   results:
     show:
-      ranked_name_suggestions: 'Ranked Name Suggestions'
-      name: 'Name'
-      rank: 'Rank'
-      no_suggestions: 'No suggestions yet.'
       back_to_project: '← Back to the project'
       vetoes:
         one: 'Has %{count} veto'

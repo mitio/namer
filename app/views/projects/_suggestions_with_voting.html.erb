@@ -1,0 +1,26 @@
+<h4><%= t '.name_suggestions' %></h4>
+
+<% if @project.suggestions.any? %>
+  <table class="table suggestions">
+    <thead>
+      <tr>
+        <th class="name"><%= t '.name' %></th>
+        <th class="vote"><%= t '.your_vote' %></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @project.suggestions.in_alphabetical_order.each do |suggestion| %>
+        <%= render suggestion %>
+      <% end %>
+    </tbody>
+  </table>
+<% else %>
+  <p>
+    <%= t '.no_suggestions' %>
+    <%= link_to t('.add_suggestion'), new_project_suggestion_path(@project) %>
+  </p>
+<% end %>
+
+<p>
+  <%= link_to t('.suggest_name'), new_project_suggestion_path(@project), class: 'btn btn-small btn-success' %>
+</p>

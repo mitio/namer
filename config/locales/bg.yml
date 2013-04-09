@@ -40,6 +40,7 @@ bg:
     show:
       edit: '(редакция)'
       results: '(резултати)'
+    suggestions_with_voting:
       name_suggestions: 'Текущи предложения'
       name: 'Име'
       your_vote: 'Вашата оценка'
@@ -61,6 +62,11 @@ bg:
       back_to_project: 'Обратно към проекта'
     form_fields:
       formatting_hints: 'Това поле се форматира според правилата на Markdown.'
+    ranked_suggestions:
+      ranked_name_suggestions: 'Ранглиста на предложенията'
+      name: 'Име'
+      rank: 'Ранг'
+      no_suggestions: 'Все още няма предложения.'
 
   suggestions:
     flashes:
@@ -82,10 +88,6 @@ bg:
 
   results:
     show:
-      ranked_name_suggestions: 'Ранглиста на предложенията'
-      name: 'Име'
-      rank: 'Ранг'
-      no_suggestions: 'Все още няма предложения.'
       back_to_project: '← Обратно към проекта'
       vetoes:
         one: 'Има %{count} глас "вето"'

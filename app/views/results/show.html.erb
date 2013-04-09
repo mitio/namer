@@ -3,42 +3,6 @@
 </h2>
 
 <%= render 'projects/description' %>
-
-<h4><%= t '.ranked_name_suggestions' %></h4>
-
-<% if @project.ranked_suggestions.any? %>
-  <table class="table ranked-suggestions">
-    <thead>
-      <tr>
-        <th class="name"><%= t '.name' %></th>
-        <th class="rank"><%= t '.rank' %></th>
-        <th></th>
-      </tr>
-    </thead>
-    <tbody>
-      <% @project.ranked_suggestions.each do |suggestion| %>
-        <tr>
-          <td><%= suggestion.name %></td>
-          <td><%= suggestion.rank %></td>
-          <td>
-            <%= render 'vote_counts', suggestion: suggestion if suggestion.votes.any? %>
-
-            <% if suggestion.votes_with_reason.any? %>
-              <div class="comments">
-                <% suggestion.votes_with_reason.each do |vote| %>
-                  <p><%= t "vote_types.#{vote.vote}" %> — <%= vote.reason %></p>
-                <% end %>
-              </div>
-            <% end %>
-          </td>
-        </tr>
-      <% end %>
-    </tbody>
-  </table>
-<% else %>
-  <p>
-    <%= t '.no_suggestions' %>
-  </p>
-<% end %>
+<%= render 'projects/ranked_suggestions' %>
 
 <p><%= link_to t('.back_to_project'), @project %></p>
