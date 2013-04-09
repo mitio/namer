@@ -17,3 +17,13 @@
 	margin: 0 4px;
 	padding: 0 8px;
 }
+
+.control-inline {
+	.control-label {
+		width: auto;
+		text-align: left;
+		padding-top: 0;
+		margin-left: 5px;
+	}
+	label.checkbox { float: left; }
+}
