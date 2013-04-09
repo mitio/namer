@@ -6,7 +6,9 @@
 			}
 			&.vote-veto {
 				color: #f00;
-				font-weight: bold;
+				.count, .type {
+					font-weight: bold;
+				}
 			}
 		}
 	}
