@@ -62,6 +62,7 @@ en:
       back_to_project: 'Go back to the project'
     form_fields:
       formatting_hints: 'This text will be formatted as Markdown.'
+      completed_project_hints: 'When a project is completed, voting is no longer possible and the results become publicly visible.'
     ranked_suggestions:
       ranked_name_suggestions: 'Ranked Name Suggestions'
       name: 'Name'
@@ -118,6 +119,7 @@ en:
     attributes:
       project:
         description: 'Description'
+        completed: 'This project is completed'
       suggestion:
         name: 'Name'
       vote:
