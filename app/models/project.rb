@@ -5,7 +5,7 @@ class Project < ActiveRecord::Base
   validates :key, presence: true, uniqueness: true
   validates :description, presence: true
 
-  attr_accessible :description
+  attr_accessible :description, :completed
 
   before_validation :set_key
   before_create :set_key
