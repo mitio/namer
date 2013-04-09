@@ -4,10 +4,15 @@
   <% if @project.owned_by? current_user %>
     <small>
       <%= link_to t('.edit'), edit_project_path(@project) %>
-      <%= link_to t('.results'), project_results_path(@project) %>
+      <%= link_to t('.results'), project_results_path(@project) unless @project.completed? %>
     </small>
   <% end %>
 </h2>
 
 <%= render 'description' %>
-<%= render 'suggestions_with_voting' %>
+
+<% if @project.completed? %>
+  <%= render 'ranked_suggestions' %>
+<% else %>
+  <%= render 'suggestions_with_voting' %>
+<% end %>
