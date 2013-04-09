@@ -15,7 +15,7 @@
           <td><%= suggestion.name %></td>
           <td><%= suggestion.rank %></td>
           <td>
-            <%= render 'vote_counts', suggestion: suggestion if suggestion.votes.any? %>
+            <%= render 'results/vote_counts', suggestion: suggestion if suggestion.votes.any? %>
 
             <% if suggestion.votes_with_reason.any? %>
               <div class="comments">

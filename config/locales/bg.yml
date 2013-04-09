@@ -92,13 +92,13 @@ bg:
       vetoes:
         one: 'Има %{count} глас "вето"'
         other: 'Има %{count} гласа "вето"'
-    count:
-      count_html: '<span class="count">%{count}</span> × <span class="type">%{type}</span>'
 
   votes:
     form:
       reason: 'Вашият коментар'
       save: 'Запази'
+    count:
+      count_html: '<span class="count">%{count}</span> × <span class="type">%{type}</span>'
 
   pages:
     about:
