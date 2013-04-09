@@ -38,8 +38,9 @@ bg:
       create: 'Създайте проекта'
       go_home: 'Обратно към началната страница'
     show:
-      edit: '(редакция)'
-      results: '(резултати)'
+    project_navigation:
+      edit: 'Редакция'
+      results: 'Резултати'
     suggestions_with_voting:
       name_suggestions: 'Текущи предложения'
       name: 'Име'

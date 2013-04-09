@@ -1,12 +1,6 @@
 <h2>
+  <%= render 'project_navigation' if @project.owned_by? current_user %>
   <%= @project.display_name.humanize %>
-
-  <% if @project.owned_by? current_user %>
-    <small>
-      <%= link_to t('.edit'), edit_project_path(@project) %>
-      <%= link_to t('.results'), project_results_path(@project) unless @project.completed? %>
-    </small>
-  <% end %>
 </h2>
 
 <%= render 'description' %>

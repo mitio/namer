@@ -1,0 +1,6 @@
+<ul class="nav nav-pills">
+  <li><%= link_to t('.edit'), edit_project_path(@project) %></li>
+  <% unless @project.completed? %>
+    <li><%= link_to t('.results'), project_results_path(@project) %></li>
+  <% end %>
+</ul>

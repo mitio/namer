@@ -38,8 +38,9 @@ en:
       create: 'Create your project'
       go_home: 'Go to the homepage'
     show:
-      edit: '(edit)'
-      results: '(results)'
+    project_navigation:
+      edit: 'Edit'
+      results: 'Results'
     suggestions_with_voting:
       name_suggestions: 'Current name suggestions'
       name: 'Name'
