@@ -1,12 +1,17 @@
 .table.ranked-suggestions {
-	.vetoes {
-		display: inline-block;
-		padding: 0 5px;
-		background-color: #e22;
-		color: #fff;
-		border-radius: 2px;
+	.vote-counts {
+		.vote {
+			.count {
+				font-weight: bold;
+			}
+			&.vote-veto {
+				color: #f00;
+				font-weight: bold;
+			}
+		}
 	}
 	.comments {
+		margin-top: 10px;
 		p {
 			margin: 0;
 		}

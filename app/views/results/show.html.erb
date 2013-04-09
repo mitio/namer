@@ -21,9 +21,8 @@
           <td><%= suggestion.name %></td>
           <td><%= suggestion.rank %></td>
           <td>
-            <% if suggestion.has_veto? %>
-              <span class="vetoes"><%= t '.vetoes', count: suggestion.vetoes %></span>
-            <% end %>
+            <%= render 'vote_counts', suggestion: suggestion if suggestion.votes.any? %>
+
             <% if suggestion.votes_with_reason.any? %>
               <div class="comments">
                 <% suggestion.votes_with_reason.each do |vote| %>

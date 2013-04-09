@@ -90,6 +90,8 @@ en:
       vetoes:
         one: 'Has %{count} veto'
         other: 'Has %{count} vetoes'
+    count:
+      count_html: '<span class="count">%{count}</span> × <span class="type">%{type}</span>'
 
   votes:
     form:

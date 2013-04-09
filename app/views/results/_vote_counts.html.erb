@@ -1,0 +1,3 @@
+<div class="vote-counts">
+  <%= suggestion.vote_counts.map { |type, count| render('count', count: count, type: type).strip }.to_sentence.html_safe %>
+</div>
