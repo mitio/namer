@@ -7,6 +7,8 @@ class Project < ActiveRecord::Base
 
   attr_accessible :description, :completed
 
+  scope :in_progress, where(completed: false)
+
   before_validation :set_key
   before_create :set_key
 
