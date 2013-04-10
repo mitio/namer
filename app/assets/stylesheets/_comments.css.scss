@@ -1,0 +1,11 @@
+@mixin comments {
+	.comments {
+		margin: 0;
+		padding-top: 10px;
+		clear: both;
+		p {
+			margin: 0;
+			font-style: italic;
+		}
+	}
+}
