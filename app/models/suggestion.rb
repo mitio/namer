@@ -48,6 +48,10 @@ class Suggestion < ActiveRecord::Base
     votes.select(&:has_reason?)
   end
 
+  def public_comments?
+    project.public_comments?
+  end
+
   def vote_counts
     votes_by_type = votes.group_by(&:vote).map { |type, votes| [type, votes.size] }.sort_by { |type, _| Vote.vote_types.index(type) }
     Hash[votes_by_type]

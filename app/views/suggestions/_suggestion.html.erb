@@ -4,5 +4,15 @@
     <%= suggestion.name %>
     <%= render 'suggestions/delete_button', suggestion: suggestion %>
   </td>
-  <td><%= render 'votes/form', suggestion: suggestion, vote: vote %></td>
+  <td>
+    <%= render 'votes/form', suggestion: suggestion, vote: vote %>
+
+    <% if suggestion.public_comments? and suggestion.votes_with_reason.any? %>
+      <div class="comments">
+        <% suggestion.votes_with_reason.each do |vote| %>
+          <p><%= vote.reason %></p>
+        <% end %>
+      </div>
+    <% end %>
+  </td>
 </tr>

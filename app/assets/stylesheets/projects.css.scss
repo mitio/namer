@@ -1,3 +1,5 @@
+@import '_comments';
+
 .table.projects {
 	.actions {
 		a {
@@ -25,4 +27,5 @@
 			text-shadow: 0 -1px 0 #222;
 		}
 	}
+	@include comments();
 }
