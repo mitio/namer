@@ -1,2 +1,3 @@
 <%= f.input :description, hint: t('.formatting_hints'), autofocus: true %>
+<%= f.input :public_comments, wrapper: :inline, hint: t('.public_comments_hints') %>
 <%= f.input :completed, wrapper: :inline, hint: t('.completed_project_hints') if f.object.persisted? %>

@@ -5,7 +5,7 @@ class Project < ActiveRecord::Base
   validates :key, presence: true, uniqueness: true
   validates :description, presence: true
 
-  attr_accessible :description, :completed
+  attr_accessible :description, :completed, :public_comments
 
   scope :in_progress, where(completed: false)
 

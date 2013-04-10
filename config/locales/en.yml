@@ -63,6 +63,7 @@ en:
       back_to_project: 'Go back to the project'
     form_fields:
       formatting_hints: 'This text will be formatted as Markdown.'
+      public_comments_hints: 'If this is selected, all comments on suggestions will be visible to everyone while the voting is still in progress.'
       completed_project_hints: 'When a project is completed, voting is no longer possible and the results become publicly visible.'
     ranked_suggestions:
       ranked_name_suggestions: 'Ranked Name Suggestions'
@@ -120,6 +121,7 @@ en:
     attributes:
       project:
         description: 'Description'
+        public_comments: 'Comments are publicly visible'
         completed: 'This project is completed'
       suggestion:
         name: 'Name'

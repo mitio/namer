@@ -63,6 +63,7 @@ bg:
       back_to_project: 'Обратно към проекта'
     form_fields:
       formatting_hints: 'Това поле се форматира според правилата на Markdown.'
+      public_comments_hints: 'Ако отметката е избрана, коментари на предложения ще се виждат от всички и преди приключване на проекта.'
       completed_project_hints: 'С приключване на проекта, възможността за гласуване се прекратява и резултатите стават публични.'
     ranked_suggestions:
       ranked_name_suggestions: 'Ранглиста на предложенията'
@@ -120,6 +121,7 @@ bg:
     attributes:
       project:
         description: 'Описание'
+        public_comments: 'Публично видими коментари'
         completed: 'Проектът е приключил'
       suggestion:
         name: 'Име'
