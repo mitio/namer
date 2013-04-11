@@ -70,6 +70,11 @@ en:
       name: 'Name'
       rank: 'Rank'
       no_suggestions: 'No suggestions yet.'
+      participants: 'Participants'
+      participants_info:
+        zero: 'No one took part in the voting process.'
+        one: 'One person voted in this project.'
+        other: 'There were %{count} people who took part in this project.'
 
   suggestions:
     flashes:

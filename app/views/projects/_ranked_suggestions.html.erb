@@ -29,6 +29,9 @@
       <% end %>
     </tbody>
   </table>
+
+  <h4><%= t '.participants' %></h4>
+  <p><%= t '.participants_info', count: @project.participants_count %></p>
 <% else %>
   <p>
     <%= t '.no_suggestions' %>

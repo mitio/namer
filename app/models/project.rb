@@ -34,6 +34,10 @@ class Project < ActiveRecord::Base
     suggestions.sort_by { |suggestion| -suggestion.rank }
   end
 
+  def participants_count
+    suggestions.pluck(:user_id).uniq.size
+  end
+
   private
 
   def set_key
