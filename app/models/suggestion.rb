@@ -45,7 +45,7 @@ class Suggestion < ActiveRecord::Base
   end
 
   def votes_with_reason
-    votes.select(&:has_reason?)
+    votes.select(&:has_reason?).sort_by(&:updated_at)
   end
 
   def public_comments?
