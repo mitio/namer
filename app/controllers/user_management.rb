@@ -14,6 +14,13 @@ module UserManagement
     end
   end
 
+  def set_auth_token_from_params
+    if params[:auth_token].present?
+      cookies[:auth_token] = {value: params[:auth_token], expires: 1.year.from_now}
+      redirect_to url_for(params.except(:auth_token).merge(cookie: 1))
+    end
+  end
+
   def current_user
     @current_user
   end
