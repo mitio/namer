@@ -1,6 +1,7 @@
 class Project < ActiveRecord::Base
   belongs_to :user
   has_many :suggestions, dependent: :destroy
+  has_many :votes, through: :suggestions
 
   validates :key, presence: true, uniqueness: true
   validates :description, presence: true
@@ -35,7 +36,7 @@ class Project < ActiveRecord::Base
   end
 
   def participants_count
-    suggestions.pluck(:user_id).uniq.size
+    (votes.pluck(:user_id) + suggestions.pluck(:user_id)).uniq.size
   end
 
   private
