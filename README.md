@@ -1,8 +1,8 @@
-== Namer
+# Namer
 
 This is a small application that allows a group of people to brainstorm a name for something without gathering into the same room at the same time.
 
-=== Features
+### Features
 
 * Multiple projects for brainstorming names
 * Anonymous name suggestions
