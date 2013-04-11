@@ -110,9 +110,10 @@ en:
 
   pages:
     about:
-      about: 'About Namer'
+      about: 'About This Site'
       built_by_dimitar_html: 'Thrown together by <a href="%{url}">Dimitar Dimitrov</a>.'
       source_on_github_html: 'You can find the <a href="%{url}">full source code on GitHub</a>.'
+      privacy_info_html: 'Read about our <a href="%{url}">privacy and cookies usage policy</a>.'
     privacy:
       title: 'Privacy And Cookies Usage'
       cookies_used: |

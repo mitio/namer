@@ -18,7 +18,7 @@ bg:
     new_project: 'Нов проект'
     projects: 'Вашите проекти'
     suggestions: 'Вашите предложения'
-    about: 'За приложението'
+    about: 'Относно'
 
   project:
     display_name: 'Проект %{key}...'
@@ -110,9 +110,10 @@ bg:
 
   pages:
     about:
-      about: 'За проекта'
+      about: 'За този сайт'
       built_by_dimitar_html: 'Сглобено от <a href="%{url}">Димитър Димитров</a>.'
       source_on_github_html: 'Можете да намерите <a href="%{url}">пълния код на приложението в GitHub</a>.'
+      privacy_info_html: 'Вижте информация за <a href="%{url}">чувствителните данни, използвани от този сайт</a>.'
     privacy:
       title: 'Чувствителни данни'
       cookies_used: |
